@@ -26,8 +26,11 @@
         "@ionic/storage": "2.1.3",
         "cordova-android": "^6.2.3",
         "cordova-ios": "^4.4.0",
+        "cordova-plugin-add-swift-support": "^1.6.1",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-ionic-webview": "^1.1.16",
+        "cordova-plugin-navitia-sdk": "git+https://github.com/CanalTP/CDVNavitiaSDK.git",
+        "cordova-plugin-navitia-sdk-ux": "^0.3.1",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-whitelist": "^1.3.1",
         "ionic-angular": "3.9.2",
@@ -48,7 +51,10 @@
             "cordova-plugin-ionic-webview": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-navitia-sdk-ux": {
+                "ANDROID_PRIMARY_COLOR": "#000000"
+            }
         },
         "platforms": [
             "android",
