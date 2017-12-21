@@ -1,3 +1,21 @@
 page-home {
+  .section {
+    .title {
+      color: white;
+      font-weight: bold;
+      font-size: xx-large;
+    }
 
+    .from {
+      background-color: #2ec95c;
+    }
+
+    .to {
+      background-color: #ff6666;
+    }
+
+    .go {
+      background-color: #488aff;
+    }
+  }
 }
