@@ -1,43 +1,49 @@
 page-home {
-  .container {
-    padding: 0;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    .container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
 
-    .sectionTitle {
-      flex: 1;
-      color: white;
-      font-weight: bold;
-      font-size: xx-large;
+        p {
+            margin: 0;
+        }
 
-      .from {
-        background-color: #2ec95c;
-      }
+        .sectionTitle {
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
 
-      .to {
-        background-color: #ff6666;
-      }
+            .from {
+                background-color: #2ec95c;
+            }
 
-      .go {
-        background-color: #488aff;
-        text-align: center;
-      }
+            .to {
+                background-color: #ff6666;
+            }
+
+            .go {
+                background-color: #488aff;
+                text-align: center;
+            }
+        }
+
+        .sectionContent {
+            font-size: xx-large;
+            flex: 1;
+            align-items: stretch;
+            align-self: stretch;
+
+            .line {
+                flex: 1;
+                background-color: #fbfbfb;
+                overflow: auto;
+            }
+
+            .stopPoint {
+                flex: 4;
+                overflow: auto;
+            }
+        }
     }
-
-    .sectionContent {
-      flex: 12;
-      font-size: xx-large;
-      align-items: stretch;
-
-      .line {
-        flex: 1;
-        background-color: #8c8c8c;
-      }
-
-      .stopPoint {
-        flex: 4;
-      }
-    }
-  }
 }
