@@ -27,6 +27,17 @@ page-home {
 
     .sectionContent {
       flex: 12;
+      font-size: xx-large;
+      align-items: stretch;
+
+      .line {
+        flex: 1;
+        background-color: #8c8c8c;
+      }
+
+      .stopPoint {
+        flex: 4;
+      }
     }
   }
 }
