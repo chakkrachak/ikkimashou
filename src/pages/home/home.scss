@@ -1,6 +1,6 @@
 page-home {
     .toolbar-background {
-        background-color: #0097A7;
+        background-color: color($colors, dark-primary);
     }
 
     .toolbar-title {
@@ -24,15 +24,15 @@ page-home {
             font-size: xx-large;
 
             .from {
-                background-color: #00BCD4;
+                background-color: color($colors, primary);
             }
 
             .to {
-                background-color: #00BCD4;
+                background-color: color($colors, primary);
             }
 
             .go {
-                background-color: #FF4081;
+                    background-color: color($colors, accent);
                 text-align: center;
             }
         }
