@@ -1,6 +1,10 @@
 page-home {
-    .title {
+    .toolbar-background {
         background-color: #0097A7;
+    }
+
+    .toolbar-title {
+        color: white;
         font-weight: bold;
     }
 
@@ -41,7 +45,6 @@ page-home {
 
             .line {
                 flex: 1;
-                background-color: #fbfbfb;
                 overflow: auto;
             }
 
