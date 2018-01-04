@@ -31,9 +31,26 @@ export class HomePage {
                     for (var line of response.lines) {
                         this.lines.push(line);
                     }
+                    this.lines.sort( (a, b): number => {
+                        if (this.toNumber(a.code) < this.toNumber(b.code)) {
+                            return -1;
+                        } else if ((this.toNumber(a.code) == this.toNumber(b.code))) {
+                            if ((a.code.includes(b.code))) {
+                                return 1;
+                            } else {
+                                return -1;
+                            }
+                        } else {
+                            return 1;
+                        }
+                    });
                 })
             }, error => {
                 alert(error);
             });
+    }
+
+    toNumber(s: string): number {
+        return Number(s.replace(/[a-zA-Z]+/gi, ''));
     }
 }
