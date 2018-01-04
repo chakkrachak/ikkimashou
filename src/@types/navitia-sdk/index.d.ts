@@ -4610,7 +4610,7 @@ declare class Line {
     text_color: string;
     physical_modes: Array<PhysicalMode>;
     codes: Array<Code>;
-    comments: Array<Comment>;
+    comments: Array<ModelComment>;
     closing_time: string;
     opening_time: string;
     commercial_mode: CommercialMode;
@@ -4623,7 +4623,7 @@ declare class LineGroup {
     name: string;
     lines: Array<Line>;
     main_line: Line;
-    comments: Array<Comment>;
+    comments: Array<ModelComment>;
     id: string;
 }
 
@@ -4904,7 +4904,7 @@ declare class Route {
     links: Array<LinkSchema>;
     physical_modes: Array<PhysicalMode>;
     is_frequence: string;
-    comments: Array<Comment>;
+    comments: Array<ModelComment>;
     direction_type: string;
     geojson: MultiLineStringSchema;
     stop_points: Array<StopPoint>;
@@ -5029,7 +5029,7 @@ declare class StopArea {
     name: string;
     links: Array<LinkSchema>;
     physical_modes: Array<PhysicalMode>;
-    comments: Array<Comment>;
+    comments: Array<ModelComment>;
     label: string;
     commercial_modes: Array<CommercialMode>;
     coord: Coord;
@@ -5069,7 +5069,7 @@ declare class StopPoint {
     label: string;
     equipments: Array<string>;
     commercial_modes: Array<CommercialMode>;
-    comments: Array<Comment>;
+    comments: Array<ModelComment>;
     administrative_regions: Array<Admin>;
     address: Address;
     id: string;
@@ -5209,7 +5209,7 @@ declare class VehicleJourney {
     disruptions: Array<LinkSchema>;
     calendars: Array<Calendar>;
     stop_times: Array<StopTime>;
-    comments: Array<Comment>;
+    comments: Array<ModelComment>;
     validity_pattern: ValidityPattern;
     id: string;
     trip: Trip;
