@@ -1,0 +1,20 @@
+home-line-item {
+    .item {
+        padding: 0;
+        font-weight: bold;
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .item-inner {
+        padding: 0;
+
+        .label {
+            margin: 0;
+        }
+    }
+    
+    .item-md.item-block .item-inner  {
+        border-bottom: 0;
+    }
+}
