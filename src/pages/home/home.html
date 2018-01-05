@@ -24,7 +24,8 @@
             <ion-col class="stopPoint">
                 <ion-list>
                     <home-stop-point-item *ngFor="let stopPoint of stopPointsDeparture"
-                                          [stopPoint]="stopPoint"></home-stop-point-item>
+                                          [stopPoint]="stopPoint"
+                                          (click)="journeyDeparture=stopPoint"></home-stop-point-item>
                 </ion-list>
             </ion-col>
         </ion-row>
@@ -44,11 +45,12 @@
             <ion-col class="stopPoint">
                 <ion-list>
                     <home-stop-point-item *ngFor="let stopPoint of stopPointsArrival"
-                                          [stopPoint]="stopPoint"></home-stop-point-item>
+                                          [stopPoint]="stopPoint"
+                                          (click)="journeyArrival=stopPoint"></home-stop-point-item>
                 </ion-list>
             </ion-col>
         </ion-row>
-        <ion-row class="sectionTitle">
+        <ion-row class="sectionTitle" (click)="launchJourney()">
             <ion-col class="go">
                 <p>GO</p>
             </ion-col>

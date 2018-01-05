@@ -12,8 +12,8 @@ export class HomePage {
     lines: Array<Line> = [];
     stopPointsDeparture: Array<StopPoint> = [];
     stopPointsArrival: Array<StopPoint> = [];
-    journeyDeparture: StopPoint;
-    journeyArrival: StopPoint;
+    journeyDeparture?: StopPoint;
+    journeyArrival?: StopPoint;
 
     constructor(public navCtrl: NavController, public platform: Platform, private zone: NgZone) {
         platform.ready().then(() => {
@@ -67,6 +67,17 @@ export class HomePage {
             }, error => {
                 alert(error);
             });
+    }
+
+    launchJourney() {
+        if (this.journeyDeparture === undefined || this.journeyDeparture === null) {
+            alert('Choose departure');
+            return;
+        }
+        if (this.journeyArrival === undefined || this.journeyArrival === null) {
+            alert('Choose arrival');
+            return;
+        }
     }
 
     toNumber(s: string): number {
