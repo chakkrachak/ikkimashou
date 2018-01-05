@@ -14,6 +14,7 @@
  */
 declare namespace NavitiaSDKUX {
     function init(token: NavitiaSDKUXConfiguration): void;
+    function invokeJourneyResults(journeyParams: any, success: () => void, error: (error: string) => void): void;
 }
 
 declare class NavitiaSDKUXConfiguration {

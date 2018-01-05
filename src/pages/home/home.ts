@@ -78,6 +78,15 @@ export class HomePage {
             alert('Choose arrival');
             return;
         }
+
+        var journeyParams = {
+            originId: this.journeyDeparture.id,
+            destinationId: this.journeyArrival.id,
+        };
+
+        NavitiaSDKUX.invokeJourneyResults(journeyParams, function() {}, function(error) {
+            alert(error);
+        });
     }
 
     toNumber(s: string): number {
