@@ -1,0 +1,18 @@
+home-stop-point-item {
+    .item {
+        padding: 0;
+
+        .item-inner {
+            padding: 0;
+
+            .label {
+                margin: 0;
+            }
+        }
+    }
+
+    .item-md.item-block .item-inner {
+        padding: 0;
+        border-bottom: 0;
+    }
+}

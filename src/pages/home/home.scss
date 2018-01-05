@@ -56,23 +56,6 @@ page-home {
             .stopPoint {
                 flex: 4;
                 overflow: auto;
-
-                .item {
-                    padding: 0;
-
-                    .item-inner {
-                        padding: 0;
-                        border: 0;
-
-                        .label {
-                            margin: 0;
-                        }
-                    }
-                }
-
-                .item-block {
-                    border: 0;
-                }
             }
         }
     }

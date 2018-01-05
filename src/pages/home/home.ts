@@ -10,7 +10,12 @@ export class HomePage {
         token: '9e304161-bb97-4210-b13d-c71eaf58961c'
     };
     lines: Array<Line> = [];
-    stopPoints: Array<string> = [];
+    stopPoints: Array<StopPoint> = [
+        {label: "toto", comment: ""},
+        {label: "toto", comment: ""},
+        {label: "toto", comment: ""},
+        {label: "toto", comment: ""}
+    ];
 
     constructor(public navCtrl: NavController, public platform: Platform, private zone: NgZone) {
         platform.ready().then(() => {

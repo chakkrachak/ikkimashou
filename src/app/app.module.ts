@@ -7,12 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {HomeLineItemComponent} from "../components/home-line-item/home-line-item";
+import {HomeStopPointItemComponent} from "../components/home-stop-point-item/home-stop-point-item";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    HomeLineItemComponent
+    HomeLineItemComponent,
+    HomeStopPointItemComponent
   ],
   imports: [
     BrowserModule,
