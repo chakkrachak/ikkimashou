@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ikkimashou !
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Ikkimashou !
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
@@ -16,12 +16,15 @@
         <ion-row class="sectionContent">
             <ion-col class="lines">
                 <ion-list>
-                    <home-line-item *ngFor="let line of lines" [line]="line"></home-line-item>
+                    <home-line-item *ngFor="let line of lines"
+                                    [line]="line"
+                                    (click)="fillStopPoints(line, stopPointsDeparture)"></home-line-item>
                 </ion-list>
             </ion-col>
             <ion-col class="stopPoint">
                 <ion-list>
-                    <home-stop-point-item *ngFor="let stopPoint of stopPoints" [stopPoint]="stopPoint"></home-stop-point-item>
+                    <home-stop-point-item *ngFor="let stopPoint of stopPointsDeparture"
+                                          [stopPoint]="stopPoint"></home-stop-point-item>
                 </ion-list>
             </ion-col>
         </ion-row>
@@ -33,12 +36,15 @@
         <ion-row class="sectionContent">
             <ion-col class="lines">
                 <ion-list>
-                    <home-line-item *ngFor="let line of lines" [line]="line"></home-line-item>
+                    <home-line-item *ngFor="let line of lines"
+                                    [line]="line"
+                                    (click)="fillStopPoints(line, stopPointsArrival)"></home-line-item>
                 </ion-list>
             </ion-col>
             <ion-col class="stopPoint">
                 <ion-list>
-                    <home-stop-point-item *ngFor="let stopPoint of stopPoints" [stopPoint]="stopPoint"></home-stop-point-item>
+                    <home-stop-point-item *ngFor="let stopPoint of stopPointsArrival"
+                                          [stopPoint]="stopPoint"></home-stop-point-item>
                 </ion-list>
             </ion-col>
         </ion-row>

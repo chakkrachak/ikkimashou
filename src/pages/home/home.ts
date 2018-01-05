@@ -10,12 +10,8 @@ export class HomePage {
         token: '9e304161-bb97-4210-b13d-c71eaf58961c'
     };
     lines: Array<Line> = [];
-    stopPoints: Array<StopPoint> = [
-        {label: "toto", comment: ""},
-        {label: "toto", comment: ""},
-        {label: "toto", comment: ""},
-        {label: "toto", comment: ""}
-    ];
+    stopPointsDeparture: Array<StopPoint> = [];
+    stopPointsArrival: Array<StopPoint> = [];
 
     constructor(public navCtrl: NavController, public platform: Platform, private zone: NgZone) {
         platform.ready().then(() => {
@@ -50,6 +46,22 @@ export class HomePage {
                         }
                     });
                 })
+            }, error => {
+                alert(error);
+            });
+    }
+
+    fillStopPoints(line: Line, stopPoints: Array<StopPoint>) {
+        NavitiaSDK.stopPoints.coverageRegionUriStopPointsRequestBuilder()
+            .withRegion('fr-idf')
+            .withUri('/physical_modes/physical_mode:Metro/lines/'+line.id)
+            .get(response => {
+                this.zone.run(() => {
+                    stopPoints.length = 0;
+                    for (var stopPoint of response.stop_points) {
+                        stopPoints.push(stopPoint);
+                    }
+                });
             }, error => {
                 alert(error);
             });
