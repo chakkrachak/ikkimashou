@@ -12,6 +12,8 @@ export class HomePage {
     lines: Array<Line> = [];
     stopPointsDeparture: Array<StopPoint> = [];
     stopPointsArrival: Array<StopPoint> = [];
+    journeyDeparture: StopPoint;
+    journeyArrival: StopPoint;
 
     constructor(public navCtrl: NavController, public platform: Platform, private zone: NgZone) {
         platform.ready().then(() => {
