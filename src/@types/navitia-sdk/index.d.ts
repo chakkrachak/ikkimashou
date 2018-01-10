@@ -2,7 +2,7 @@
 // Project: [~Navitia SDK~]
 // Definitions by: [~Kisio Digital~] <[~https://navitia.io/~]>
 
-declare namespace NavitiaSDK {
+declare module NavitiaSDK {
     function init(token: string): void;
     let calendars: CalendarsApi;
     let commercialModes: CommercialModesApi;

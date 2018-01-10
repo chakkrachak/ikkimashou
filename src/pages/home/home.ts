@@ -1,3 +1,4 @@
+///<reference path="../../@types/navitia-sdk/index.d.ts"/>
 import {Component, NgZone} from '@angular/core';
 import {NavController, Platform} from 'ionic-angular';
 
