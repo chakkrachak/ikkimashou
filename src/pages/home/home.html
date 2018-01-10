@@ -18,7 +18,7 @@
                 <ion-list>
                     <home-line-item *ngFor="let line of lines"
                                     [line]="line"
-                                    [selected]="selectedLine!==undefined && line.id==selectedLine.id"
+                                    [selected]="selectedLineDeparture!==undefined && line.id==selectedLineDeparture.id"
                                     (click)="clickOnLine(line, stopPointsDeparture);"></home-line-item>
                 </ion-list>
             </ion-col>

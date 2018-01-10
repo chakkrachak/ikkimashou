@@ -14,7 +14,7 @@ export class HomePage {
     stopPointsDeparture: Array<StopPoint> = [];
     stopPointsArrival: Array<StopPoint> = [];
 
-    selectedLine?: Line;
+    selectedLineDeparture?: Line;
     journeyDeparture?: StopPoint;
     journeyArrival?: StopPoint;
 
@@ -57,7 +57,7 @@ export class HomePage {
     }
 
     clickOnLine(line: Line, stopPoints: Array<StopPoint>) {
-        this.selectedLine = line;
+        this.selectedLineDeparture = line;
         this.fillStopPoints(line, stopPoints);
     }
 
