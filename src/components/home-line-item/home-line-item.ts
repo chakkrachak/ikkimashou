@@ -13,6 +13,7 @@ import {Component, Input} from '@angular/core';
 export class HomeLineItemComponent {
 
     _line: Line;
+    _selected: Boolean = false;
 
     @Input()
     set line(line: Line) {
@@ -23,7 +24,19 @@ export class HomeLineItemComponent {
         return this._line;
     }
 
+    @Input()
+    set selected(selected: Boolean) {
+        this._selected = selected;
+    }
+
+    get selected() {
+        return this._selected;
+    }
+
     constructor() {
     }
 
+    getClassForSelectedLine() {
+        return this._selected ? 'selected-line' : '';
+    }
 }

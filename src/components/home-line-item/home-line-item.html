@@ -1,1 +1,6 @@
-<ion-item [style.background-color]="'#'+line.color" [style.color]="'#'+line.text_color">{{ line.code }}</ion-item>
+<ion-item
+    [ngClass]="getClassForSelectedLine()"
+    [style.background-color]="'#'+line.color"
+    [style.color]="'#'+line.text_color">
+    {{ line.code }}
+</ion-item>
