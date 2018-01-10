@@ -21,11 +21,11 @@ export class HomePage {
             NavitiaSDK.init(this.navitiaConfiguration.token);
             NavitiaSDKUX.init(this.navitiaConfiguration);
 
-            this.loadData();
+            this.fillLines();
         });
     }
 
-    loadData() {
+    fillLines() {
         NavitiaSDK.lines.coverageRegionUriLinesRequestBuilder()
             .withRegion('fr-idf')
             .withUri("/physical_modes/physical_mode:Metro")
