@@ -1,3 +1,4 @@
+///<reference path="../../@types/navitia-sdk/index.d.ts"/>
 import {Component, Input} from '@angular/core';
 
 /**
