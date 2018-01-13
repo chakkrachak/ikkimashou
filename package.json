@@ -61,5 +61,9 @@
             "android",
             "ios"
         ]
+    },
+    "browser": {
+        "navitia-sdk": false,
+        "NavitiaSDKUX": false
     }
 }
