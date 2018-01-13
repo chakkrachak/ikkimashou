@@ -1,9 +1,11 @@
 ///<reference types="navitia-sdk"/>
 import {Component, NgZone} from '@angular/core';
 import {NavController, Platform} from 'ionic-angular';
-import {Line, NavitiaSDKApi, StopPoint} from "navitia-sdk";
+import {NavitiaSDKApi, Line, StopPoint} from "navitia-sdk";
+import {NavitiaSDKUXApi, NavitiaSDKUXConfiguration} from "navitia-sdk-ux";
 
 declare var NavitiaSDK: NavitiaSDKApi;
+declare var NavitiaSDKUX: NavitiaSDKUXApi;
 
 @Component({
     selector: 'page-home',
