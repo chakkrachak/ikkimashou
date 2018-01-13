@@ -65,6 +65,6 @@
     },
     "browser": {
         "navitia-sdk": false,
-        "NavitiaSDKUX": false
+        "Navitia-sdk-ux": false
     }
 }
