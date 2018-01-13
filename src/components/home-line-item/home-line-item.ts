@@ -1,5 +1,6 @@
-///<reference path="../../@types/navitia-sdk/index.d.ts"/>
+///<reference types="@types/navitia-sdk"/>
 import {Component, Input} from '@angular/core';
+import {Line} from "navitia-sdk";
 
 /**
  * Generated class for the HomeLineItemComponent component.
