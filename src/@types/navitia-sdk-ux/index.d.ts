@@ -15,6 +15,16 @@ declare module "navitia-sdk-ux" {
     export class JourneysUXParameters {
         originId: string;
         destinationId: string;
+        originLabel?: string;
+        destinationLabel?: string;
+        datetime?: string;
+        datetimeRepresents?: string;
+        forbiddenUris?: Array<string>;
+        firstSectionModes?: Array<string>;
+        lastSectionModes?: Array<string>;
+        count?: number;
+        minNbJourneys?: number;
+        maxNbJourneys?: number;
     }
 }
 
