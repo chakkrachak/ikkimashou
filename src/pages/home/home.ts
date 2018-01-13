@@ -1,8 +1,11 @@
 ///<reference types="navitia-sdk"/>
+///<reference types="navitia-sdk-ux"/>
 import {Component, NgZone} from '@angular/core';
 import {NavController, Platform} from 'ionic-angular';
 import {NavitiaSDKApi, Line, StopPoint} from "navitia-sdk";
-import {NavitiaSDKUXApi, NavitiaSDKUXConfiguration, JourneysUXParameters} from "navitia-sdk-ux";
+import {
+    NavitiaSDKUXApi, NavitiaSDKUXConfiguration, JourneysUXParameters
+} from "navitia-sdk-ux";
 
 declare var NavitiaSDK: NavitiaSDKApi;
 declare var NavitiaSDKUX: NavitiaSDKUXApi;
@@ -42,7 +45,7 @@ export class HomePage {
                     for (var line of response.lines) {
                         this.lines.push(line);
                     }
-                    this.lines.sort( (a, b): number => {
+                    this.lines.sort((a, b): number => {
                         if (this.toNumber(a.code) < this.toNumber(b.code)) {
                             return -1;
                         } else if ((this.toNumber(a.code) == this.toNumber(b.code))) {
@@ -69,7 +72,7 @@ export class HomePage {
     fillStopPoints(line: Line, stopPoints: Array<StopPoint>) {
         NavitiaSDK.stopPoints.coverageRegionUriStopPointsRequestBuilder()
             .withRegion('fr-idf')
-            .withUri('/physical_modes/physical_mode:Metro/lines/'+line.id)
+            .withUri('/physical_modes/physical_mode:Metro/lines/' + line.id)
             .get(response => {
                 this.zone.run(() => {
                     stopPoints.length = 0;
@@ -96,8 +99,12 @@ export class HomePage {
             originId: this.journeyDeparture.id,
             destinationId: this.journeyArrival.id,
         };
+        journeyParams.originLabel = 'Au départ';
+        journeyParams.destinationLabel = 'A l\'arrivée';
+        journeyParams.datetimeRepresents = 'arrival';
 
-        NavitiaSDKUX.invokeJourneyResults(journeyParams, function() {}, function(error) {
+        NavitiaSDKUX.invokeJourneyResults(journeyParams, function () {
+        }, function (error) {
             alert(error);
         });
     }
