@@ -1,4 +1,4 @@
-///<reference types="@types/navitia-sdk"/>
+///<reference types="navitia-sdk"/>
 import {Component, Input} from '@angular/core';
 import {StopPoint} from "navitia-sdk";
 
