@@ -98,10 +98,9 @@ export class HomePage {
         var journeyParams: JourneysUXParameters = {
             originId: this.journeyDeparture.id,
             destinationId: this.journeyArrival.id,
+            originLabel: this.journeyDeparture.label,
+            destinationLabel: this.journeyArrival.label
         };
-        journeyParams.originLabel = 'Au départ';
-        journeyParams.destinationLabel = 'A l\'arrivée';
-        journeyParams.datetimeRepresents = 'arrival';
 
         NavitiaSDKUX.invokeJourneyResults(journeyParams, function () {
         }, function (error) {
