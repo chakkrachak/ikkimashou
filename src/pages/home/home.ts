@@ -2,7 +2,7 @@
 import {Component, NgZone} from '@angular/core';
 import {NavController, Platform} from 'ionic-angular';
 import {NavitiaSDKApi, Line, StopPoint} from "navitia-sdk";
-import {NavitiaSDKUXApi, NavitiaSDKUXConfiguration} from "navitia-sdk-ux";
+import {NavitiaSDKUXApi, NavitiaSDKUXConfiguration, JourneysUXParameters} from "navitia-sdk-ux";
 
 declare var NavitiaSDK: NavitiaSDKApi;
 declare var NavitiaSDKUX: NavitiaSDKUXApi;
@@ -92,7 +92,7 @@ export class HomePage {
             return;
         }
 
-        var journeyParams = {
+        var journeyParams: JourneysUXParameters = {
             originId: this.journeyDeparture.id,
             destinationId: this.journeyArrival.id,
         };
