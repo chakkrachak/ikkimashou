@@ -38,7 +38,7 @@ export class HomeLineItemComponent {
     constructor() {
     }
 
-    getClassForSelectedLine() {
-        return this._selected ? 'selected-line' : '';
+    getClassForSelected() {
+        return this._selected ? 'selected' : '';
     }
 }

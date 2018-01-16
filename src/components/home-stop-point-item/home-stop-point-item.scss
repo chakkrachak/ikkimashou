@@ -16,4 +16,9 @@ home-stop-point-item {
         padding: 0;
         border-bottom: 0;
     }
+
+
+    .selected {
+        background-color: color($colors, light-primary);
+    }
 }

@@ -19,13 +19,14 @@
                     <home-line-item *ngFor="let line of lines"
                                     [line]="line"
                                     [selected]="selectedLineDeparture!==undefined && line.id==selectedLineDeparture.id"
-                                    (click)="clickOnLine(line, stopPointsDeparture);"></home-line-item>
+                                    (click)="clickOnDepartureLine(line, stopPointsDeparture);"></home-line-item>
                 </ion-list>
             </ion-col>
             <ion-col class="stopPoint">
                 <ion-list>
                     <home-stop-point-item *ngFor="let stopPoint of stopPointsDeparture"
                                           [stopPoint]="stopPoint"
+                                          [selected]="journeyDeparture!==undefined && stopPoint.id==journeyDeparture.id"
                                           (click)="journeyDeparture=stopPoint"></home-stop-point-item>
                 </ion-list>
             </ion-col>
@@ -40,13 +41,15 @@
                 <ion-list>
                     <home-line-item *ngFor="let line of lines"
                                     [line]="line"
-                                    (click)="fillStopPoints(line, stopPointsArrival);"></home-line-item>
+                                    [selected]="selectedLineArrival!==undefined && line.id==selectedLineArrival.id"
+                                    (click)="clickOnArrivalLine(line, stopPointsArrival);"></home-line-item>
                 </ion-list>
             </ion-col>
             <ion-col class="stopPoint">
                 <ion-list>
                     <home-stop-point-item *ngFor="let stopPoint of stopPointsArrival"
                                           [stopPoint]="stopPoint"
+                                          [selected]="journeyArrival!==undefined && stopPoint.id==journeyArrival.id"
                                           (click)="journeyArrival=stopPoint"></home-stop-point-item>
                 </ion-list>
             </ion-col>

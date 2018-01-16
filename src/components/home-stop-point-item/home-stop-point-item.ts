@@ -15,6 +15,7 @@ import {StopPoint} from "navitia-sdk";
 export class HomeStopPointItemComponent {
 
     _stopPoint: StopPoint;
+    _selected: Boolean = false;
 
     @Input()
     set stopPoint(stopPoint: StopPoint) {
@@ -25,7 +26,19 @@ export class HomeStopPointItemComponent {
         return this._stopPoint;
     }
 
+    @Input()
+    set selected(selected: Boolean) {
+        this._selected = selected;
+    }
+
+    get selected() {
+        return this._selected;
+    }
+
     constructor() {
     }
 
+    getClassForSelected() {
+        return this._selected ? 'selected' : '';
+    }
 }
