@@ -42,6 +42,7 @@ page-home {
             flex: 1;
             align-items: stretch;
             align-self: stretch;
+            overflow: auto;
 
             .list {
                 margin: 0;
