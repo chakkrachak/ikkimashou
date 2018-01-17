@@ -18,10 +18,23 @@ page-home {
             margin: 0;
         }
 
+        .firstThirdComponent {
+            height: 45%;
+        }
+
+        .secondThirdComponent {
+            height: 45%;
+        }
+
+        .thirdThirdComponent{
+            height: 10%;
+        }
+
         .sectionTitle {
             color: white;
             font-weight: bold;
             font-size: xx-large;
+            height: 15%;
 
             .from {
                 background-color: color($colors, primary);
@@ -42,7 +55,7 @@ page-home {
             flex: 1;
             align-items: stretch;
             align-self: stretch;
-            overflow: auto;
+            height: 85%;
 
             .list {
                 margin: 0;
@@ -52,12 +65,14 @@ page-home {
                 flex: 1;
                 overflow: auto;
                 padding: 0;
+                height: 100%;
             }
 
             .stopPoint {
                 flex: 4;
                 overflow: auto;
                 padding: 0;
+                height: 100%;
             }
         }
     }

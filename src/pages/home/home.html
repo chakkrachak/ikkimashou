@@ -8,56 +8,62 @@
 
 <ion-content>
     <ion-grid ion-fixed class="container">
-        <ion-row class="sectionTitle">
-            <ion-col class="from">
-                <p>FROM</p>
-            </ion-col>
-        </ion-row>
-        <ion-row class="sectionContent">
-            <ion-col class="lines">
-                <ion-list>
-                    <home-line-item *ngFor="let line of lines"
-                                    [line]="line"
-                                    [selected]="selectedLineDeparture!==undefined && line.id==selectedLineDeparture.id"
-                                    (click)="clickOnDepartureLine(line, stopPointsDeparture);"></home-line-item>
-                </ion-list>
-            </ion-col>
-            <ion-col class="stopPoint">
-                <ion-list>
-                    <home-stop-point-item *ngFor="let stopPoint of stopPointsDeparture"
-                                          [stopPoint]="stopPoint"
-                                          [selected]="journeyDeparture!==undefined && stopPoint.id==journeyDeparture.id"
-                                          (click)="journeyDeparture=stopPoint"></home-stop-point-item>
-                </ion-list>
-            </ion-col>
-        </ion-row>
-        <ion-row class="sectionTitle">
-            <ion-col class="to">
-                <p>TO</p>
-            </ion-col>
-        </ion-row>
-        <ion-row class="sectionContent">
-            <ion-col class="lines">
-                <ion-list>
-                    <home-line-item *ngFor="let line of lines"
-                                    [line]="line"
-                                    [selected]="selectedLineArrival!==undefined && line.id==selectedLineArrival.id"
-                                    (click)="clickOnArrivalLine(line, stopPointsArrival);"></home-line-item>
-                </ion-list>
-            </ion-col>
-            <ion-col class="stopPoint">
-                <ion-list>
-                    <home-stop-point-item *ngFor="let stopPoint of stopPointsArrival"
-                                          [stopPoint]="stopPoint"
-                                          [selected]="journeyArrival!==undefined && stopPoint.id==journeyArrival.id"
-                                          (click)="journeyArrival=stopPoint"></home-stop-point-item>
-                </ion-list>
-            </ion-col>
-        </ion-row>
-        <ion-row class="sectionTitle" (click)="launchJourney()">
-            <ion-col class="go">
-                <p>GO</p>
-            </ion-col>
-        </ion-row>
+        <div class="firstThirdComponent">
+            <ion-row class="sectionTitle">
+                <ion-col class="from">
+                    <p>FROM</p>
+                </ion-col>
+            </ion-row>
+            <ion-row class="sectionContent">
+                <ion-col class="lines">
+                    <ion-list>
+                        <home-line-item *ngFor="let line of lines"
+                                        [line]="line"
+                                        [selected]="selectedLineDeparture!==undefined && line.id==selectedLineDeparture.id"
+                                        (click)="clickOnDepartureLine(line, stopPointsDeparture);"></home-line-item>
+                    </ion-list>
+                </ion-col>
+                <ion-col class="stopPoint">
+                    <ion-list>
+                        <home-stop-point-item *ngFor="let stopPoint of stopPointsDeparture"
+                                              [stopPoint]="stopPoint"
+                                              [selected]="journeyDeparture!==undefined && stopPoint.id==journeyDeparture.id"
+                                              (click)="journeyDeparture=stopPoint"></home-stop-point-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="secondThirdComponent">
+            <ion-row class="sectionTitle">
+                <ion-col class="to">
+                    <p>TO</p>
+                </ion-col>
+            </ion-row>
+            <ion-row class="sectionContent">
+                <ion-col class="lines">
+                    <ion-list>
+                        <home-line-item *ngFor="let line of lines"
+                                        [line]="line"
+                                        [selected]="selectedLineArrival!==undefined && line.id==selectedLineArrival.id"
+                                        (click)="clickOnArrivalLine(line, stopPointsArrival);"></home-line-item>
+                    </ion-list>
+                </ion-col>
+                <ion-col class="stopPoint">
+                    <ion-list>
+                        <home-stop-point-item *ngFor="let stopPoint of stopPointsArrival"
+                                              [stopPoint]="stopPoint"
+                                              [selected]="journeyArrival!==undefined && stopPoint.id==journeyArrival.id"
+                                              (click)="journeyArrival=stopPoint"></home-stop-point-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="thirdThirdComponent">
+            <ion-row class="sectionTitle" (click)="launchJourney()">
+                <ion-col class="go">
+                    <p>GO</p>
+                </ion-col>
+            </ion-row>
+        </div>
     </ion-grid>
 </ion-content>
