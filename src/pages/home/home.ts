@@ -40,6 +40,7 @@ export class HomePage {
         NavitiaSDK.lines.coverageRegionUriLinesRequestBuilder()
             .withRegion('fr-idf')
             .withUri("/physical_modes/physical_mode:Metro")
+            .withCount(200)
             .get(response => {
                 this.zone.run(() => {
                     this.lines = [];
@@ -79,6 +80,7 @@ export class HomePage {
         NavitiaSDK.stopPoints.coverageRegionUriStopPointsRequestBuilder()
             .withRegion('fr-idf')
             .withUri('/physical_modes/physical_mode:Metro/lines/' + line.id)
+            .withCount(200)
             .get(response => {
                 this.zone.run(() => {
                     stopPoints.length = 0;
