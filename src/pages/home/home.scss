@@ -35,18 +35,26 @@ page-home {
             font-weight: bold;
             font-size: xx-large;
             height: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             .from {
                 background-color: color($colors, primary);
+                padding-left: 5px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: left;
             }
 
             .to {
                 background-color: color($colors, primary);
-            }
-
-            .go {
-                background-color: color($colors, accent);
-                text-align: center;
+                padding-left: 5px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: left;
             }
         }
 
@@ -73,6 +81,25 @@ page-home {
                 overflow: auto;
                 padding: 0;
                 height: 100%;
+            }
+        }
+
+        .sectionAction {
+            font-size: xx-large;
+            color: white;
+            font-weight: bold;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .go {
+                background-color: color($colors, accent);
+                padding: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
